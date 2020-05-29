@@ -17,6 +17,13 @@ author_profile: true
 
 Bachelor of Science in Software Engineering
 
+Minor in Music with Flute as primary instrument
+
+Society of Women Engineers
+
+Eta Kappa Nu IEEE Engineering Honor Society
+
+Tau Beta Pi Engineering Honor Society
 
 <h2>NSU University School</h2>
 
