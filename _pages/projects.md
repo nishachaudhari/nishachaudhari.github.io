@@ -20,7 +20,7 @@ My colleagues and I created a mock USB dongle on a raspberry pi that generates a
 The device uses a website display hosted on the raspberry pi to allow users to manage their passwords.
 There is full AES encryption of the users stored data in a directory storage system. 
 The software used in this project includes: Flask, Apache, HTML, Python, and Raspian from Raspberry Pi.
-Watch our virtual presentation and demo [here](https://www.youtube.com/watch?v=W20VeouqOoU).
+Watch our virtual presentation and demo [here](https://www.youtube.com/watch?v=W20VeouqOoU). Read our Report [here](https://drive.google.com/file/d/1-fUjePEm9nBDm05jNkBEwCR7oNjverzY/view?usp=sharing)
 
 You can contact my partners through their linkedIn pages: [Sean Seruya](https://www.linkedin.com/in/seanseruya/) and [Mart Francisco](https://www.linkedin.com/in/mart-francisco-960623180/)
 
