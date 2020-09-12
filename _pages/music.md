@@ -12,6 +12,7 @@ author_profile: true
 <h2>Instruments</h2>
 
 <h4> Flute </h4>
+Watch me playing flute [here](https://youtu.be/wzxwEAIECR8) for 15 whole minutes!
 
 <span style = "color: #00adb5"> 2011-Present </span>
 
