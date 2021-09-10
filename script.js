@@ -32,7 +32,6 @@ contentreact.hidden = true;
 contentangular.hidden = true;
 contentjs.hidden = true;
 
-//which navbar button is active
 let whichActive = function (b) {
   all.classList.remove('--active');
   flutter.classList.remove('--active');
