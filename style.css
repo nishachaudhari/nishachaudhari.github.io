@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.firstname {
+  color: #dc7800;
+  font-family: 'Lato';
+  font-size: 72px;
+  text-align: center;
+  padding-top: 58px;
+}
+
+.lastname {
+  color: #dc7800;
+  font-family: 'GFS Didot';
+  font-size: 24px;
+  text-align: center;
+  font-weight: 100;
+  padding-top: 1px;
+}
+
+.section {
+  color: #dc7800;
+  font-family: 'Lato';
+  font-size: 42px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/*navigation bar*/
+
+nav {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  width: 100%;
+  text-align: center;
+}
+
+nav > a {
+  font-family: 'GFS Didot';
+  font-size: 16px;
+  display: inline-block;
+  margin: 0 100px;
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+
+/*navigation animation start*/
+
+nav > a:hover {
+  color: #000;
+}
+nav > a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #dc7800;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+nav a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/*navigation animation stop*/
+
+.--active {
+  /*Which Navigation bar item is active; when active it is underlined*/
+  text-decoration: underline;
+  text-decoration-color: #dc7800;
+  text-decoration-thickness: 2px;
+}
+
+.--hidden {
+  /*Which information cards to show (all, flutter, react, etc)*/
+  display: none;
+}
+
+/* body background color, fonts, sizes*/
+body {
+  font-family: 'Avenir Next', 'Palatino';
+  font-weight: 50;
+  color: #dc7800;
+  background-color: #ffffff /*#f9efdd*/;
+  display: flex;
+  justify-content: center;
+}
+
+/*image gallery as a whole*/
+.gallery {
+  display: grid;
+  margin-right: 200px;
+  margin-left: 200px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(240px, 1fr)
+  ); /*300px 400px 374px 400px 300px;*/
+  grid-template-rows: repeat(18, 70px);
+  grid-gap: 70px;
+}
+
+/*images within gallery*/
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/*hovering over makes border and enlarges hovered image*/
+.gallery__item:hover {
+  border: 5px solid #dc7800;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/*when hovering over item x ~ item y rolls out*/
+
+/*flutter1*/
+.gallery__item--1:hover ~ .gallery__item--7 {
+  visibility: visible;
+  opacity: 1;
+  left: 0px;
+}
+/*react2*/
+.gallery__item--4:hover ~ .gallery__item--8 {
+  visibility: visible;
+  opacity: 1;
+  left: 0px;
+}
+/*react1*/
+.gallery__item--2:hover ~ .gallery__item--9 {
+  visibility: visible;
+  opacity: 1;
+  left: 0px;
+}
+/*angular*/
+.gallery__item--5:hover ~ .gallery__item--10 {
+  visibility: visible;
+  opacity: 1;
+  left: 0px;
+}
+/*flutter2*/
+.gallery__item--3:hover ~ .gallery__item--11 {
+  visibility: visible;
+  opacity: 1;
+  left: 0px;
+}
+/*js*/
+.gallery__item--6:hover ~ .gallery__item--12 {
+  visibility: visible;
+  opacity: 1;
+  left: 0px;
+}
+
+/*positions*/
+
+/*flutter1*/
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 8;
+
+  cursor: pointer;
+}
+
+.gallery__item--7 {
+  /*info for 1*/
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  visibility: hidden;
+  opacity: 0;
+  left: -100px;
+  position: relative;
+  transition: all 0.7s ease;
+  z-index: -1;
+}
+
+/*react1*/
+.gallery__item--2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 8;
+  grid-row-end: 12;
+}
+
+.gallery__item--9 {
+  /*info for 2*/
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 8;
+  grid-row-end: 10;
+  visibility: hidden;
+  opacity: 0;
+  left: -100px;
+  position: relative;
+  transition: all 0.7s ease;
+  z-index: -1;
+}
+
+/*Flutter2*/
+.gallery__item--3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 12;
+  grid-row-end: 18;
+}
+.gallery__item--11 {
+  /*info for 3*/
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 12;
+  grid-row-end: 14;
+  visibility: hidden;
+  opacity: 0;
+  left: -100px;
+  position: relative;
+  transition: all 0.7s ease;
+  z-index: -1;
+}
+
+/*react2*/
+.gallery__item--4 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+.gallery__item--8 {
+  /*info for 4*/
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 6;
+  visibility: hidden;
+  opacity: 0;
+  left: 100px;
+  position: relative;
+  transition: all 0.7s ease;
+  z-index: -1;
+}
+
+/*angular*/
+.gallery__item--5 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 14;
+}
+.gallery__item--10 {
+  /*info for 5*/
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 8;
+  visibility: hidden;
+  opacity: 0;
+  left: 100px;
+  position: relative;
+  transition: all 0.7s ease;
+  z-index: -1;
+}
+
+/*js*/
+.gallery__item--6 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 14;
+  grid-row-end: 18;
+}
+.gallery__item--12 {
+  /*info for 6*/
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 14;
+  grid-row-end: 16;
+  visibility: hidden;
+  opacity: 0;
+  left: 100px;
+  position: relative;
+  transition: all 0.7s ease;
+  z-index: -1;
+}
+
+/*navbar page contents (flutter, react,...) */
+.card-gallery {
+  display: grid;
+  margin-right: 200px;
+  margin-left: 200px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(240px, 1fr)
+  ); /*300px 400px 374px 400px 300px;*/
+  grid-template-rows: repeat(4, 100px);
+  grid-gap: 70px;
+}
+
+.card {
+  object-fit: cover;
+  display: block;
+  height: auto;
+  width: 100%;
+  max-width: 767px;
+}
+
+.pic:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 5px solid #dc7800;
+}
+
+.card__1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.card__2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+.card__3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+.card__4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+/*about section image gallery*/
+
+.me {
+  display: grid;
+  margin-right: 100px;
+  margin-left: 100px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(240px, 1fr)
+  ); /*300px 400px 374px 400px 300px;*/
+  grid-template-rows: repeat(15, 70px);
+  grid-gap: 70px;
+}
+
+.me__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*info*/
+.me__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+/*info*/
+.me__item--2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 8;
+}
+
+/*gif*/
+.me__item--3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 9;
+  grid-row-end: 15;
+}
+/*profile*/
+.me__item--4 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+/*line drawing*/
+.me__item--5 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 9;
+}
+/*info*/
+.me__item--6 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+/*info*/
+.me__item--7 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 13;
+  grid-row-end: 15;
+}
